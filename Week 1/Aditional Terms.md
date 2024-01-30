@@ -10,14 +10,14 @@
 After z-score normalization, all features will have a mean of 0 and a standard deviation of 1.
 
 To implement z-score normalization, adjust your input values as shown in this formula:
-$$x^{(i)}_j = \dfrac{x^{(i)}_j - \mu_j}{\sigma_j} \tag{4}$$ 
+$x^{(i)}_j = \dfrac{x^{(i)}_j - \mu_j}{\sigma_j} \tag{4}$
+
 where $j$ selects a feature or a column in the $\mathbf{X}$ matrix. $µ_j$ is the mean of all the values for feature (j) and $\sigma_j$ is the standard deviation of feature (j).
-$$
-\begin{align}
-\mu_j &= \frac{1}{m} \sum_{i=0}^{m-1} x^{(i)}_j \tag{5}\\
-\sigma^2_j &= \frac{1}{m} \sum_{i=0}^{m-1} (x^{(i)}_j - \mu_j)^2  \tag{6}
-\end{align}
-$$
+
+$\mu_j = \frac{1}{m} \sum_{i=0}^{m-1} x^{(i)}_j$
+
+$\sigma^2_j = \frac{1}{m} \sum_{i=0}^{m-1} (x^{(i)}_j - \mu_j)^2$
+
 
 ## Overfitting and Underfitting
 
@@ -29,7 +29,9 @@ While making predictions, a difference occurs between prediction values made by 
 
 Variance tells that how much a random variable is different from its expected value.Ideally, a model should not vary too much from one training dataset to another, which means the algorithm should be good in understanding the hidden mapping between inputs and output variables. Variance errors are either of low variance or high variance.
 
-<img align="left" src="./images/bias-and-variance-in-machine-learning4.png"     style=" width:500px; padding: 10px; " >
+<div style="background-color: white; display: inline-block; padding: 10px;">
+  <img align="middle" src="./images/bias-and-variance-in-machine-learning4.png" width="500">
+</div>
 
 Reasons for Underfitting
 * High bias and low variance.
@@ -44,7 +46,7 @@ Techniques to Reduce Underfitting
 * Remove noise from the data.
 * Increase the number of epochs or increase the duration of training to get better results.
 
-<img align="left" src="./images/bias-and-variance-in-machine-learning3.png"     style=" width:900px; padding: 10px; " >
+<img align="middle" src="./images/bias-and-variance-in-machine-learning3.png" style="width:900px; padding: 10px; background-color: white;" >
 
 Reasons for Overfitting
     
@@ -69,7 +71,7 @@ Regularization is a technique used to combat overfitting of the model to the tra
 The equation for the cost function regularized linear regression is:
 $$J(\mathbf{w},b) = \frac{1}{2m} \sum\limits_{i = 0}^{m-1} (f_{\mathbf{w},b}(\mathbf{x}^{(i)}) - y^{(i)})^2  + \frac{\lambda}{2m}  \sum_{j=0}^{n-1} w_j^2 \tag{1}$$ 
 where:
-$$ f_{\mathbf{w},b}(\mathbf{x}^{(i)}) = \mathbf{w} \cdot \mathbf{x}^{(i)} + b  \tag{2} $$ 
+$f_{\mathbf{w},b}(\mathbf{x}^{(i)}) = \mathbf{w} \cdot \mathbf{x}^{(i)} + b  \tag{2}$
 
 
 Compare this to the cost function without regularization , which is of the form:
@@ -83,13 +85,13 @@ Including this term encourages gradient descent to minimize the size of the para
 
 ### Cost function for regularized logistic regression
 For regularized **logistic** regression, the cost function is of the form
-$$J(\mathbf{w},b) = \frac{1}{m}  \sum_{i=0}^{m-1} \left[ -y^{(i)} \log\left(f_{\mathbf{w},b}\left( \mathbf{x}^{(i)} \right) \right) - \left( 1 - y^{(i)}\right) \log \left( 1 - f_{\mathbf{w},b}\left( \mathbf{x}^{(i)} \right) \right) \right] + \frac{\lambda}{2m}  \sum_{j=0}^{n-1} w_j^2 \tag{3}$$
+$$J(\mathbf{w},b) = \frac{1}{m}  \sum_{i=0}^{m-1} \left[ -y^{(i)} \log\left(f_{\mathbf{w},b}\left( \mathbf{x}^{(i)} \right) \right) - \left( 1 - y^{(i)}\right) \log \left( 1 - f_{\mathbf{w},b}\left( \mathbf{x}^{(i)} \right) \right) \right] + \frac{\lambda}{2m}  \sum_{j=0}^{n-1} w_j^2 \tag{3}$$ 
 where:
-$$ f_{\mathbf{w},b}(\mathbf{x}^{(i)}) = sigmoid(\mathbf{w} \cdot \mathbf{x}^{(i)} + b)  \tag{4} $$ 
+$f_{\mathbf{w},b}(\mathbf{x}^{(i)}) = sigmoid(\mathbf{w} \cdot \mathbf{x}^{(i)} + b)  \tag{4}$ 
 
 Compare this to the cost function without regularization:
 
-$$ J(\mathbf{w},b) = \frac{1}{m}\sum_{i=0}^{m-1} \left[ (-y^{(i)} \log\left(f_{\mathbf{w},b}\left( \mathbf{x}^{(i)} \right) \right) - \left( 1 - y^{(i)}\right) \log \left( 1 - f_{\mathbf{w},b}\left( \mathbf{x}^{(i)} \right) \right)\right] $$
+$$ J(\mathbf{w},b) = \frac{1}{m}\sum_{i=0}^{m-1} \left[ (-y^{(i)} \log\left(f_{\mathbf{w},b}\left( \mathbf{x}^{(i)} \right) \right) - \left( 1 - y^{(i)}\right) \log \left( 1 - f_{\mathbf{w},b}\left( \mathbf{x}^{(i)} \right) \right)\right] $$ 
 
 As was the case in linear regression above, the difference is the regularization term, which is    <span style="color:blue">
     $\frac{\lambda}{2m}  \sum_{j=0}^{n-1} w_j^2$ </span> 
@@ -97,10 +99,8 @@ As was the case in linear regression above, the difference is the regularization
 
 ### Computing the Gradient with regularization (both linear/logistic)
 The gradient calculation for both linear and logistic regression are nearly identical, differing only in computation of $f_{\mathbf{w}b}$.
-$$\begin{align*}
-\frac{\partial J(\mathbf{w},b)}{\partial w_j}  &= \frac{1}{m} \sum\limits_{i = 0}^{m-1} (f_{\mathbf{w},b}(\mathbf{x}^{(i)}) - y^{(i)})x_{j}^{(i)}  +  \frac{\lambda}{m} w_j \tag{2} \\
-\frac{\partial J(\mathbf{w},b)}{\partial b}  &= \frac{1}{m} \sum\limits_{i = 0}^{m-1} (f_{\mathbf{w},b}(\mathbf{x}^{(i)}) - y^{(i)}) \tag{3} 
-\end{align*}$$
+$\frac{\partial J(\mathbf{w},b)}{\partial w_j}  = \frac{1}{m} \sum\limits_{i = 0}^{m-1} (f_{\mathbf{w},b}(\mathbf{x}^{(i)}) - y^{(i)})x_{j}^{(i)}  +  \frac{\lambda}{m} w_j \tag{2}$
+$\frac{\partial J(\mathbf{w},b)}{\partial b}  = \frac{1}{m} \sum\limits_{i = 0}^{m-1} (f_{\mathbf{w},b}(\mathbf{x}^{(i)}) - y^{(i)}) \tag{3} $
 
 * m is the number of training examples in the data set      
 * $f_{\mathbf{w},b}(x^{(i)})$ is the model's prediction, while $y^{(i)}$ is the target
