@@ -119,9 +119,7 @@ $$J(w,b) = \frac{1}{2m} \sum\limits_{i = 0}^{m-1} (f_{w,b}(x^{(i)}) - y^{(i)})^2
 
 $$ f_{w,b}(x^{(i)}) = wx^{(i)} + b$$
 
-This is the equation for a line, with an intercept $b$ and a slope $w$
-
-.
+This is the equation for a line, with an intercept $b$ and a slope $w$.
 
 
 ```python
@@ -159,16 +157,12 @@ print(f'Cost at initial w: {cost:.3f}')
 
 the gradient descent algorithm is:
 
-$$\begin{align*}& \text{repeat until convergence:} \; \lbrace \newline \; & \phantom {0000} b := b -  \alpha \frac{\partial J(w,b)}{\partial b} \newline       \; & \phantom {0000} w := w -  \alpha \frac{\partial J(w,b)}{\partial w} \tag{1}  \; & 
-\newline & \rbrace\end{align*}$$
+$$ \text{repeat until convergence:} \; \lbrace \newline \;  b := b -  \alpha \frac{\partial J(w,b)}{\partial b} \newline       \;   w := w -  \alpha \frac{\partial J(w,b)}{\partial w} \tag{1}  \;  
+\newline  \rbrace$$
 
 where, parameters $w, b$ are both updated simultaniously and where  
-$$
-\frac{\partial J(w,b)}{\partial b}  = \frac{1}{m} \sum\limits_{i = 0}^{m-1} (f_{w,b}(x^{(i)}) - y^{(i)}) \tag{2}
-$$
-$$
-\frac{\partial J(w,b)}{\partial w}  = \frac{1}{m} \sum\limits_{i = 0}^{m-1} (f_{w,b}(x^{(i)}) -y^{(i)})x^{(i)} \tag{3}
-$$
+$\frac{\partial J(w,b)}{\partial b}  = \frac{1}{m} \sum\limits_{i = 0}^{m-1} (f_{w,b}(x^{(i)}) - y^{(i)}) \tag{2}$
+$\frac{\partial J(w,b)}{\partial w}  = \frac{1}{m} \sum\limits_{i = 0}^{m-1} (f_{w,b}(x^{(i)}) -y^{(i)})x^{(i)} \tag{3}$
 * m is the number of training examples in the dataset
 
     
@@ -397,8 +391,3 @@ plt.xlabel('Population of City in 10,000s')
 ![png](output_32_1.png)
     
 
-
-
-```python
-
-```
