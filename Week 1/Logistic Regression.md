@@ -85,7 +85,7 @@ plt.show()
 
 
     
-![png](output_9_0.png)
+![png](/images/output_9_0.png)
     
 
 
@@ -95,7 +95,7 @@ The goal is to build a logistic regression model to fit this data.
 
 For logistic regression, the model is represented as
 
-$$ f_{\mathbf{w},b}(x) = g(\mathbf{w}\cdot \mathbf{x} + b)$$
+$f_{\mathbf{w},b}(x) = g(\mathbf{w}\cdot \mathbf{x} + b)$
 where function $g$ is the sigmoid function. The sigmoid function is defined as:
 
 $$g(z) = \frac{1}{1+e^{-z}}$$
@@ -367,6 +367,3 @@ print('Train Accuracy: %f'%(np.mean(p == y_train) * 100))
     
 
 
-```python
-
-```
