@@ -79,7 +79,7 @@ plt.show()
 
 
     
-![png](output_10_0.png)
+![png](/images/output_10_0.png)
     
 
 
@@ -320,7 +320,7 @@ plt.xlabel('Population of City in 10,000s')
 
 
     
-![png](output_23_1.png)
+![png](/images/output_23_1.png)
     
 
 
@@ -388,6 +388,6 @@ plt.xlabel('Population of City in 10,000s')
 
 
     
-![png](output_32_1.png)
+![png](/images/output_32_1.png)
     
 
