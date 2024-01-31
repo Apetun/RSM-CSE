@@ -79,7 +79,7 @@ plt.show()
 
 
     
-![png](/images/output_10_0.png)
+![Alt text](https://github.com/Apetun/RSM-CSE/blob/07d3247cf05333232dd2c87879e9622b7100be03/Week%201/images/output_10_0.png)
     
 
 
@@ -320,7 +320,7 @@ plt.xlabel('Population of City in 10,000s')
 
 
     
-![png](/images/output_23_1.png)
+![Alt text](https://github.com/Apetun/RSM-CSE/blob/07d3247cf05333232dd2c87879e9622b7100be03/Week%201/images/output_23_1.png)
     
 
 
@@ -388,6 +388,6 @@ plt.xlabel('Population of City in 10,000s')
 
 
     
-![png](/images/output_32_1.png)
+![Alt text](https://github.com/Apetun/RSM-CSE/blob/07d3247cf05333232dd2c87879e9622b7100be03/Week%201/images/output_32_1.png)
     
 

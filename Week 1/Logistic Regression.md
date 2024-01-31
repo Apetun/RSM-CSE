@@ -85,7 +85,7 @@ plt.show()
 
 
     
-![png](/images/output_9_0.png)
+![Alt text](https://github.com/Apetun/RSM-CSE/blob/07d3247cf05333232dd2c87879e9622b7100be03/Week%201/images/output_9_0.png)
     
 
 
